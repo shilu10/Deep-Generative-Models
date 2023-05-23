@@ -5,7 +5,7 @@ from tensorflow.keras.models import load_model
 import numpy as np
 
 
-def generate_latent_points(latent_dim, n_samples, n_classes=10):
+def generate_latent_points(latent_dim, n_samples, n_classes=100):
     x_input = randn(latent_dim * n_samples)
     z_input = x_input.reshape(n_samples, latent_dim)
     labels = randint(0, n_classes, n_samples)
